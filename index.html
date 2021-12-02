@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/home.css">
     <title>Document</title>
 </head>
@@ -15,59 +15,67 @@
 <body>
     <header>
         <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
+            <img src="./assets/big-logo-orange.png" />
         </div>
     </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-
+        <section>
+            <h1 class="text-shadow">City Builder</h1>
+            <div class="active-section">
+                <div class="col1 col-style">
+                    <h2 class="text-shadow">CASTLE</h2>
+                    <select name="castle" id="castle">
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                        <option value="japanese">Japanese</option>
+                    </select>
+                    <div class="image-style" id="castle-image">
+                        <img src="./assets/castle/french02.png" alt="">
+                    </div>
+                    <p class="toggle-change">You have changed Castle <span class="count-style" id="castle-count">0</span> times.</p>
+                </div>
+                <div class="col2 col-style">
+                    <h2 class="text-shadow">DOWNTOWN</h2>
+                    <select name="downtown" id="downtown">
+                        <option value="new-york">New York</option>
+                        <option value="chicago">Chicago</option>
+                        <option value="japan">Japan</option>
+                    </select>
+                    <div class="image-style" id="downtown-image">
+                        <img src="./assets/downtown/newYork01.png" alt="">
+                    </div>
+                    <p class="toggle-change">You have changed Downtown <span class="count-style" id="downtown-count">0</span> times.</p>
+                </div>
+                <div class="col3 col-style">
+                    <h2 class="text-shadow">MARS</h2>
+                    <select name="mars" id="mars">
+                        <option value="dome">Dome</option>
+                        <option value="inflatable">Inflatable</option>
+                        <option value="earthen">Earthen</option>
+                    </select>
+                    <div class="image-style" id="mars-image">
+                        <img src="./assets/mars/dome01.png" alt="">
+                    </div>
+                    <p class="toggle-change">You have changed Mars <span class="count-style" id="mars-count">0</span> times.</p>
+                </div>
+            </div>
+            <div class="slogan-container text-shadow">
+                <h2 class="slogan-style" >Give your city a slogan.</h2>
+                <div class="input-container">
+                    <input type="text" id="text-input">
+                    <input type="button" id="button-input" value="Submit your slogan">
+                </div>
+                <div class="show-slogan" id="show-slogan">
+                    <p>Placeholder Slogan</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
 
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./script/script.js"></script>
 </body>
 
 </html>

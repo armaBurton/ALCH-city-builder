@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+:root{
+    --blue: hsla(200, 61%, 56%, 1);
+    --trans-blue: hsla(200, 61%, 56%, 0.85);
+    --navy: hsla(207, 67%, 44%, 1);
+    --trans-navy: hsla(207, 67%, 44%, 0.);
+    --trans-dark-blue: hsla(241, 100%, 30%, 0.85);
+    --dark-blue: hsla(241, 100%, 30%, 1);
+    --trans-white: hsla(170, 28%, 95%, 0.5);
+    --color5: white;
+
+    /* --color1: hsla(349, 69%, 76%, 1);
+    --color2: hsla(207, 67%, 44%, 1);
+    --color3: hsla(200, 61%, 56%, 1);
+    --color4: hsla(187, 41%, 94%, 1);
+    --color5: hsla(170, 28%, 95%, 1); */
+    
+    /* --color1: hsla(45, 86%, 83%, 1);
+    --color2: hsla(135, 65%, 98%, 1);
+    --color3: hsla(315, 37%, 86%, 1);
+    --color4: hsla(45, 73%, 98%, 1);
+    --color5: hsla(224, 40%, 79%, 1); */
+    
+    --header-height: 80px;
+    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+    --footer-shadow: 0px 0px 20px 1px rgba(0,0,0,0.45);
+    --gutter: 30px;
+    --footer-height: 25px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--dark-blue);
+    height: var(--header-height);
+    box-shadow: var(--shadow);
+}
+
+body {
+    background: linear-gradient(var(--trans-blue), var(--trans-dark-blue)), url('../assets/bkgnd/cityB&WPattern.png'); 
+    background-repeat: repeat;
+    background-size: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(var(--footer-height));
+    position: fixed;
+}
+
+section{
+    width: 960px;
+}
+
+h1{
+    font-size: 3.6rem;
+    color: orange;
+    text-align: center;
+    font-weight: 900;   
+}
+
+.text-shadow{
+    text-shadow: 
+        -1px 0 black,
+        1px 0 black,
+        0 1px black,
+        0 -1px black,
+        -2px 0 black,
+        2px 0 black,
+        0 2px black,
+        0 -2px black;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.gutter-right {
+    margin-right: 20px;
+}
+
+header img {
+    height: var(--header-height);
+}
+
+.active-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-style{
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+select{
+    margin-top: 15px;
+    width: 100px;
+}
+
+.image-style{
+    margin-top: 15px;
+    width: 300px;
+    height: 300px;
+    background-color: var(--trans-blue);
+    box-shadow: 1px 1px 5px var(--trans-white);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+img{
+    height: inherit;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toggle-change{
+    background-color: var(--trans-blue);
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.count-style{
+    text-decoration: underline;
+}
+
+.slogan-container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slogan-style{
+    color: orange;
+}
+
+.input-container{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#text-input{
+    width: 250px;
+    border-radius: 3px;
+}
+
+#button-input{
+    margin-left: 5px;
+    padding: 3px 5px;
+    cursor: pointer;
+    background-color: orange;
+    color: black;
+}
+
+#button-input:hover{
+    background-color: darkblue;
+    color: white;
+}
+
+#button-input:active{
+    background-color: blue;
+}
+
+.show-slogan{
+    width: 600px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 15px;
+}
+
+p{
+    margin-top: 3px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: var(--footer-height);
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--dark-blue);
+    box-shadow: var(--footer-shadow);
+    font-family: 'titillium web';
+    color: orange;
+}
