@@ -51,15 +51,15 @@ castleDropdown.addEventListener('change', () => {
     castle++;
     castleImage.innerHTML = `<img src="../assets/castle/${castleDropdown.value}.png" />`;
     displayStats();
-  });
+});
   
-  downtownDropdown.addEventListener('change', () => {
+downtownDropdown.addEventListener('change', () => {
     downtown++;
     downtownImage.innerHTML = `<img src="../assets/downtown/${downtownDropdown.value}.png" />`;
     displayStats();
-  });
+});
   
-  marsDropdown.addEventListener('change', () => {
+marsDropdown.addEventListener('change', () => {
     mars++;
     marsImage.innerHTML = `<img src="../assets/mars/${marsDropdown.value}.png" />`;
     displayStats();
@@ -89,7 +89,7 @@ function displaySlogans(){
     sloganShow.textContent = ``;
 
     for (let a of sloganArr){
-      sloganShow.prepend(a);
+        sloganShow.prepend(a);
     }
 }
 
