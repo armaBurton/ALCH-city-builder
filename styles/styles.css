@@ -160,12 +160,12 @@ img{
     justify-content: center;
 }
 
-#text-input{
+#slogan-input{
     width: 250px;
     border-radius: 3px;
 }
 
-#button-input{
+#slogan-button{
     margin-left: 5px;
     padding: 3px 5px;
     cursor: pointer;
@@ -173,16 +173,13 @@ img{
     color: black;
 }
 
-#button-input:hover{
+#slogan-button:hover{
     background-color: darkblue;
     color: white;
 }
 
-#button-input:active{
-    background-color: blue;
-}
 
-.show-slogan{
+.slogan-show{
     width: 600px;
     color: white;
     font-weight: bold;

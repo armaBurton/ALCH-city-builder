@@ -24,49 +24,45 @@
             <div class="active-section">
                 <div class="col1 col-style">
                     <h2 class="text-shadow">CASTLE</h2>
-                    <select name="castle" id="castle">
+                    <select name="castle" id="castle-dropdown">
                         <option value="french">French</option>
                         <option value="german">German</option>
                         <option value="japanese">Japanese</option>
                     </select>
                     <div class="image-style" id="castle-image">
-                        <img src="./assets/castle/french02.png" alt="">
                     </div>
-                    <p class="toggle-change">You have changed Castle <span class="count-style" id="castle-count">0</span> times.</p>
+                    <p class="toggle-change">You have changed Castle <span class="count-style" id="castle-count"></span> times.</p>
                 </div>
                 <div class="col2 col-style">
                     <h2 class="text-shadow">DOWNTOWN</h2>
-                    <select name="downtown" id="downtown">
-                        <option value="new-york">New York</option>
+                    <select name="downtown" id="downtown-dropdown">
+                        <option value="newYork">New York</option>
                         <option value="chicago">Chicago</option>
                         <option value="japan">Japan</option>
                     </select>
                     <div class="image-style" id="downtown-image">
-                        <img src="./assets/downtown/newYork01.png" alt="">
                     </div>
-                    <p class="toggle-change">You have changed Downtown <span class="count-style" id="downtown-count">0</span> times.</p>
+                    <p class="toggle-change">You have changed Downtown <span class="count-style" id="downtown-count"></span> times.</p>
                 </div>
                 <div class="col3 col-style">
                     <h2 class="text-shadow">MARS</h2>
-                    <select name="mars" id="mars">
+                    <select name="mars" id="mars-dropdown">
                         <option value="dome">Dome</option>
                         <option value="inflatable">Inflatable</option>
                         <option value="earthen">Earthen</option>
                     </select>
                     <div class="image-style" id="mars-image">
-                        <img src="./assets/mars/dome01.png" alt="">
                     </div>
-                    <p class="toggle-change">You have changed Mars <span class="count-style" id="mars-count">0</span> times.</p>
+                    <p class="toggle-change">You have changed Mars <span class="count-style" id="mars-count"></span> times.</p>
                 </div>
             </div>
             <div class="slogan-container text-shadow">
-                <h2 class="slogan-style" >Give your city a slogan.</h2>
+                <h2 class="slogan-style">Give your city a slogan.</h2>
                 <div class="input-container">
-                    <input type="text" id="text-input">
-                    <input type="button" id="button-input" value="Submit your slogan">
+                    <input type="text" id="slogan-input">
+                    <input type="button" id="slogan-button" value="Submit your slogan">
                 </div>
-                <div class="show-slogan" id="show-slogan">
-                    <p>Placeholder Slogan</p>
+                <div class="slogan-show" id="slogan-show">
                 </div>
             </div>
         </section>
