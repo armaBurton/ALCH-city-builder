@@ -30,16 +30,18 @@ const arrayOfObjects = [
 ];
 
 let populateArr = [];
+let castleDropdown,
+    castleImage = document.getElementById(`castle-image`);
 
 //grab dropdown elements;
 const 
-    castleDropdown = document.getElementById(`castle-dropdown`),
+    // castleDropdown = document.getElementById(`castle-dropdown`),
     downtownDropdown = document.getElementById(`downtown-dropdown`),
     marsDropdown = document.getElementById(`mars-dropdown`);
 
 //Grab image divs
 const
-    castleImage = document.getElementById(`castle-image`),
+    // castleImage = document.getElementById(`castle-image`),
     downtownImage = document.getElementById(`downtown-image`),
     marsImage = document.getElementById(`mars-image`);
 
@@ -54,6 +56,13 @@ const
     sloganInput = document.getElementById(`slogan-input`),
     sloganButton = document.getElementById(`slogan-button`),
     sloganShow = document.getElementById(`slogan-show`);
+    
+//grab columns for populating dropdowns
+const 
+    parent1 = document.getElementById(`col1`),
+    child1 = document.getElementById(`castle-image`),
+    col2 = document.getElementById(`col2`),
+    col3 = document.getElementById(`col3`);
 
 // let state
 let castle = 0,
@@ -69,23 +78,28 @@ let sloganArr = [];
 window.addEventListener('load', () => {
     let h2 = document.createElement(`h2`);
     h2.classList.add(`text-shadow`, `title-case`);
+    h2.setAttribute(`id`, `castle-name`);
     h2.textContent = arrayOfObjects[0].name;
+    // let castleName = document.getElementById(`castle-name`);
     let select = document.createElement(`select`);
     select.setAttribute(`name`, `castle`);
     select.setAttribute(`id`, `castle-dropdown`);
     populateArr.push(h2);
     for (let d of arrayOfObjects[0].drop){
         let option = document.createElement(`option`);
-        option.setAttribute(`value`, d);
         option.classList.add(`title-case`);
-        option.textContent = d;
+        option.setAttribute(`value`, d);
+        option.textContent = titleCase(d);
         select.append(option);
     }
     populateArr.push(select);
-    console.log(populateArr);
+    parent1.insertBefore(h2, child1);
+    parent1.insertBefore(select, child1);
 
+    castleDropdown = document.getElementById(`castle-dropdown`);
+    castleImage = document.getElementById(`castle-image`);
 
-    // castleImage.innerHTML = `<img src="../assets/castle/${castleDropdown.value}.png" />`;
+    castleImage.innerHTML = `<img src="../assets/castle/${castleDropdown.value}.png" />`;
     castleCount.textContent = castle;
     downtownImage.innerHTML = `<img src="../assets/downtown/${downtownDropdown.value}.png" />`;
     downtownCount.textContent = downtown;
@@ -96,13 +110,23 @@ window.addEventListener('load', () => {
     sloganShow.append(sloganArr);
 });
 
-/*
-castleDropdown.addEventListener('change', () => {
-    castle++;
-    castleImage.innerHTML = `<img src="../assets/castle/${castleDropdown.value}.png" />`;
-    displayStats();
-});
-*/  
+//titlecase function stolen from google
+function titleCase(str) {
+    return str.toLowerCase().split(' ').map(function(word) {
+        return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
+}
+
+//waits for page to load
+setTimeout(castleDrop, 200);
+function castleDrop() {
+    castleDropdown.addEventListener('change', () => {
+        castle++;
+        castleImage.innerHTML = `<img src="../assets/castle/${castleDropdown.value}.png" />`;
+        displayStats();
+    });
+}
+
 
 downtownDropdown.addEventListener('change', () => {
     downtown++;
