@@ -203,3 +203,7 @@ footer {
     font-family: 'titillium web';
     color: orange;
 }
+
+.title-case{
+    text-transform: capitalize;
+}

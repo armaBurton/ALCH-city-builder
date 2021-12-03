@@ -1,5 +1,36 @@
 // import functions and grab DOM elements
 import { createCountString } from './utils.js';
+
+//stretch array of objects
+const arrayOfObjects = [
+    {
+        name: `CASTLE`,
+        drop: [
+            `french`,
+            `german`,
+            `japanese`    
+        ]
+    },
+    {
+        name: `downtown`,
+        drop: [
+            `new york`,
+            `chicago`,
+            `japan`
+        ]
+    },
+    {
+        name: `mars`,
+        drop: [
+            `dome`,
+            `inflatable`,
+            `earthen`
+        ]
+    }
+];
+
+let populateArr = [];
+
 //grab dropdown elements;
 const 
     castleDropdown = document.getElementById(`castle-dropdown`),
@@ -36,7 +67,25 @@ let sloganArr = [];
 // set event listeners 
 //init load assign initial values to variables !!!no blank divs!!!
 window.addEventListener('load', () => {
-    castleImage.innerHTML = `<img src="../assets/castle/${castleDropdown.value}.png" />`;
+    let h2 = document.createElement(`h2`);
+    h2.classList.add(`text-shadow`, `title-case`);
+    h2.textContent = arrayOfObjects[0].name;
+    let select = document.createElement(`select`);
+    select.setAttribute(`name`, `castle`);
+    select.setAttribute(`id`, `castle-dropdown`);
+    populateArr.push(h2);
+    for (let d of arrayOfObjects[0].drop){
+        let option = document.createElement(`option`);
+        option.setAttribute(`value`, d);
+        option.classList.add(`title-case`);
+        option.textContent = d;
+        select.append(option);
+    }
+    populateArr.push(select);
+    console.log(populateArr);
+
+
+    // castleImage.innerHTML = `<img src="../assets/castle/${castleDropdown.value}.png" />`;
     castleCount.textContent = castle;
     downtownImage.innerHTML = `<img src="../assets/downtown/${downtownDropdown.value}.png" />`;
     downtownCount.textContent = downtown;
@@ -47,12 +96,14 @@ window.addEventListener('load', () => {
     sloganShow.append(sloganArr);
 });
 
+/*
 castleDropdown.addEventListener('change', () => {
     castle++;
     castleImage.innerHTML = `<img src="../assets/castle/${castleDropdown.value}.png" />`;
     displayStats();
 });
-  
+*/  
+
 downtownDropdown.addEventListener('change', () => {
     downtown++;
     downtownImage.innerHTML = `<img src="../assets/downtown/${downtownDropdown.value}.png" />`;
