@@ -36,7 +36,7 @@ let castleImage = document.getElementById(`castle-image`);
 const
     // castleImage = document.getElementById(`castle-image`),
     downtownImage = document.getElementById(`downtown-image`),
-    marsImage = document.getElementById(`mars-image`);
+    marsImage = document.getElementById(`mars-pic`);
 
 //grab output div for change states
 const 
@@ -101,7 +101,8 @@ window.addEventListener('load', () => {
         castleCount.textContent = castle;
         downtownImage.innerHTML = `<img src="../assets/downtown/${arrayOfObjects[1].drop[0]}.png" />`;
         downtownCount.textContent = downtown;
-        marsImage.innerHTML = `<img src="../assets/mars/${arrayOfObjects[2].drop[0]}.png" />`;
+        // marsImage.innerHTML = `<img src="../assets/mars/${arrayOfObjects[2].drop[0]}.png" />`;
+        marsImage.src = `../assets/mars/dome.png`;
         marsCount.textContent = mars;
         
         setTimeout(() => {
