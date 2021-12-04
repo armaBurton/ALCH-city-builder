@@ -99,10 +99,10 @@ window.addEventListener('load', () => {
         // castleImage.innerHTML = `<img src="../assets/castle/${arrayOfObjects[0].drop[0]}.png" />`;
         castleImage.innerHTML = `<img src="./assets/castle/french.png" />`;
         castleCount.textContent = castle;
-        downtownImage.innerHTML = `<img src="../assets/downtown/${arrayOfObjects[1].drop[0]}.png" />`;
+        downtownImage.innerHTML = `<img src="./assets/downtown/${arrayOfObjects[1].drop[0]}.png" />`;
         downtownCount.textContent = downtown;
         // marsImage.innerHTML = `<img src="../assets/mars/${arrayOfObjects[2].drop[0]}.png" />`;
-        marsImage.src = `../assets/mars/dome.png`;
+        marsImage.src = `./assets/mars/dome.png`;
         marsCount.textContent = mars;
         
         setTimeout(() => {
@@ -116,7 +116,7 @@ window.addEventListener('load', () => {
         dropdown[i].addEventListener('change', () => {
             let state = arrayOfObjects[i].name;
             setCount(state);
-            imgArr[i].innerHTML = `<img src="../assets/${arrayOfObjects[i].name}/${dropdown[i].value}.png" />`;
+            imgArr[i].innerHTML = `<img src="./assets/${arrayOfObjects[i].name}/${dropdown[i].value}.png" />`;
             displayStats();
         });
     }
