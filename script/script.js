@@ -96,7 +96,8 @@ window.addEventListener('load', () => {
         imgArr[i] = document.getElementById(`${arrayOfObjects[i].name}-image`);
         dropdown[i] = document.getElementById(`${arrayOfObjects[i].name}-dropdown`);
 
-        castleImage.innerHTML = `<img src="../assets/castle/${arrayOfObjects[0].drop[0]}.png" />`;
+        // castleImage.innerHTML = `<img src="../assets/castle/${arrayOfObjects[0].drop[0]}.png" />`;
+        castleImage.innerHTML = `<img src="../assets/castle/french.png" />`;
         castleCount.textContent = castle;
         downtownImage.innerHTML = `<img src="../assets/downtown/${arrayOfObjects[1].drop[0]}.png" />`;
         downtownCount.textContent = downtown;
