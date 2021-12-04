@@ -44,7 +44,7 @@ header {
 }
 
 body {
-    background: linear-gradient(var(--trans-blue), var(--trans-dark-blue)), url('../assets/bkgnd/cityB&WPattern.png'); 
+    background: linear-gradient(var(--trans-blue), var(--trans-dark-blue)), url('../assets/bkgnd/cityB&WPattern.jpg'); 
     background-repeat: repeat;
     background-size: 300px;
     display: flex;
